@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core/include/lua5.3.5/lua.hpp"
+#include "Include/lua5.3.5/lua.hpp"
 
 namespace Lua {
     class Runtime
