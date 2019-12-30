@@ -4,15 +4,18 @@
 
 namespace Lua {
 	Runtime::Runtime() :
-		state(lua_newstate(NULL, NULL))
+		state(luaL_newstate())
 	{
 		luaL_openlibs(state);
-
-		//luaL_dofile(L, "Test.lua");
 	}
 
 	Runtime::~Runtime()
 	{
 		lua_close(state);
+	}
+
+	void Runtime::Dofile(const char* filePath)
+	{
+		luaL_dofile(state, filePath);
 	}
 }

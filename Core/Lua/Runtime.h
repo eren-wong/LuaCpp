@@ -9,6 +9,7 @@ namespace Lua {
         Runtime();
         ~Runtime();
 
+        void Dofile(const char* filePath);
     private:
         lua_State* state;
     };
